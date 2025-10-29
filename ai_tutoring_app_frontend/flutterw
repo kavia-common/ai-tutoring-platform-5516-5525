@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# flutterw - Monorepo-friendly Flutter wrapper.
+# Allows running "flutterw <cmd>" from repository root by delegating into the app.
+set -euo pipefail
+
+APP_DIR="ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend"
+
+if [[ ! -f "$APP_DIR/pubspec.yaml" ]]; then
+  echo "Error: Flutter app not found at $APP_DIR (pubspec.yaml missing)" >&2
+  exit 1
+fi
+
+# If no args passed, default to analyze
+CMD="${1:-analyze}"
+shift || true
+
+echo "flutterw: cd $APP_DIR && flutter $CMD $*"
+cd "$APP_DIR"
+exec flutter "$CMD" "$@"

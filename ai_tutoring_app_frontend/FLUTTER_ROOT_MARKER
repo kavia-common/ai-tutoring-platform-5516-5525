@@ -1,0 +1,7 @@
+# Marker indicating this folder is the Flutter project root for CI/build tools.
+# Key files in this directory:
+# - pubspec.yaml
+# - lib/
+# - android/
+# - test/
+# Entrypoint: lib/main.dart

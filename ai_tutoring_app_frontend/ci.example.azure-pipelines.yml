@@ -1,0 +1,38 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- checkout: self
+
+- task: Bash@3
+  displayName: Set up Flutter
+  inputs:
+    targetType: 'inline'
+    script: |
+      git clone https://github.com/flutter/flutter.git -b stable
+      echo '##vso[task.prependpath]$(System.DefaultWorkingDirectory)/flutter/bin'
+      flutter --version
+
+- task: Bash@3
+  displayName: Flutter Pub Get
+  inputs:
+    targetType: 'inline'
+    workingDirectory: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+    script: flutter pub get
+
+- task: Bash@3
+  displayName: Flutter Analyze
+  inputs:
+    targetType: 'inline'
+    workingDirectory: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+    script: flutter analyze
+
+- task: Bash@3
+  displayName: Flutter Test
+  inputs:
+    targetType: 'inline'
+    workingDirectory: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+    script: flutter test

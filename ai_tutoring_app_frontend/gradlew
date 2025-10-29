@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Gradle wrapper shim at repo root to help CI that probes Android builds at root.
+# Delegates to the real Android project inside the Flutter app.
+set -euo pipefail
+APP_ANDROID_DIR="ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend/android"
+if [[ ! -d "$APP_ANDROID_DIR" ]]; then
+  echo "Root gradlew shim: Android directory not found at $APP_ANDROID_DIR" >&2
+  exit 1
+fi
+cd "$APP_ANDROID_DIR"
+exec ./gradlew "$@"

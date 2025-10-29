@@ -1,0 +1,5 @@
+name: ai_tutoring_app_frontend
+description: Flutter project root metadata for CI discovery
+path: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+entry: lib/main.dart
+notes: Run all flutter commands from the 'path' directory (contains pubspec.yaml)

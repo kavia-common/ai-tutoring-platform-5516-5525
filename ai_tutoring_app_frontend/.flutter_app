@@ -1,0 +1,3 @@
+# Marker file for CI and tooling to detect Flutter project root
+# This directory contains pubspec.yaml and Flutter app sources.
+# Tools may check for this file to locate the correct working directory.

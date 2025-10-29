@@ -1,0 +1,17 @@
+{
+  "type": "flutter",
+  "app_dir": "ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend",
+  "analyze": {
+    "cmd": "flutter analyze",
+    "working_directory": "ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend"
+  },
+  "test": {
+    "cmd": "flutter test --no-pub",
+    "working_directory": "ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend"
+  },
+  "bootstrap": {
+    "cmd": "flutter pub get",
+    "working_directory": "ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend"
+  },
+  "notes": "Tools should cd into app_dir before running flutter commands."
+}

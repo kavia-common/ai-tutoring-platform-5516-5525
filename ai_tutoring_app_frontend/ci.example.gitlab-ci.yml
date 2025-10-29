@@ -1,0 +1,28 @@
+stages:
+  - setup
+  - analyze
+  - test
+
+variables:
+  FLUTTER_PROJECT_DIR: "ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend"
+
+setup:
+  stage: setup
+  image: ghcr.io/cirruslabs/flutter:stable
+  script:
+    - cd "$FLUTTER_PROJECT_DIR"
+    - flutter pub get
+
+analyze:
+  stage: analyze
+  image: ghcr.io/cirruslabs/flutter:stable
+  script:
+    - cd "$FLUTTER_PROJECT_DIR"
+    - flutter analyze
+
+test:
+  stage: test
+  image: ghcr.io/cirruslabs/flutter:stable
+  script:
+    - cd "$FLUTTER_PROJECT_DIR"
+    - flutter test

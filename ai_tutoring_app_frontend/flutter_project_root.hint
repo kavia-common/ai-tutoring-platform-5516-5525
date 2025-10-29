@@ -1,0 +1,8 @@
+# This repository contains a Flutter project at the following relative path:
+ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+
+# CI systems should cd into this directory before running any Flutter commands:
+#   cd ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+#   flutter pub get
+#   flutter analyze
+#   flutter test

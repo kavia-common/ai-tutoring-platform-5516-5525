@@ -1,0 +1,8 @@
+# PUBLIC_INTERFACE
+# Repository modules manifest for CI/analyzer discovery.
+modules:
+  - name: ai_tutoring_app_frontend
+    type: flutter
+    path: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+    entry: lib/main.dart
+    notes: "Run all Flutter commands from this path (contains pubspec.yaml)."

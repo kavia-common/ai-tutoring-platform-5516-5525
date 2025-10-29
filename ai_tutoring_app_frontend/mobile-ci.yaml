@@ -1,0 +1,17 @@
+# Generic mobile CI locator/config for monorepo setups.
+flutter_app_dir: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+analyze:
+  cmd: flutter analyze
+  working_directory: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+test:
+  cmd: flutter test --no-pub
+  working_directory: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+bootstrap:
+  cmd: flutter pub get
+  working_directory: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+notes: |
+  If your CI ignores this file, use one of:
+    - ./ci.sh
+    - ./mobile_code_analysis.sh
+    - ./run_flutter.sh analyze
+    - cd ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend && flutter analyze

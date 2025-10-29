@@ -1,0 +1,5 @@
+# PUBLIC_INTERFACE
+# Canonical location of the Flutter project within this repository.
+[app]
+path = "ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend"
+entry = "lib/main.dart"

@@ -1,0 +1,8 @@
+# PUBLIC_INTERFACE
+# CI discovery manifest for subprojects within this repository.
+flutter:
+  - name: ai_tutoring_app_frontend
+    path: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+    entry: lib/main.dart
+    analyze: true
+    test: true

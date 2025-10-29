@@ -1,0 +1,11 @@
+# CI Working Directory Hint for Flutter Monorepo
+# Ensure your CI pipeline changes into the Flutter project directory before running Flutter commands.
+
+flutter_project_root: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+commands:
+  - flutter pub get
+  - flutter analyze
+  - flutter test
+notes: |
+  Set working-directory to the path above or cd into it prior to executing commands.
+  The directory contains pubspec.yaml and the Flutter lib/ source tree.

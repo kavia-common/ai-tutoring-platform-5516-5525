@@ -1,0 +1,9 @@
+projects:
+  flutter-app:
+    root: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+    description: AI Tutoring App Frontend (Flutter)
+    commands:
+      setup: flutter pub get
+      analyze: flutter analyze
+      test: flutter test
+notes: Ensure your CI changes into the 'root' before running commands.

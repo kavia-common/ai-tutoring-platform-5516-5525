@@ -1,0 +1,19 @@
+{
+  // Canonical CI pointer for mobile analyzers.
+  "project": "flutter",
+  "flutter_app_dir": "ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend",
+  "commands": {
+    "bootstrap": {
+      "cmd": "flutter pub get",
+      "cwd": "ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend"
+    },
+    "analyze": {
+      "cmd": "flutter analyze",
+      "cwd": "ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend"
+    },
+    "test": {
+      "cmd": "flutter test --no-pub",
+      "cwd": "ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend"
+    }
+  }
+}

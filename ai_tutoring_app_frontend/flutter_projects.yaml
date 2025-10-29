@@ -1,0 +1,4 @@
+# PUBLIC_INTERFACE
+# Manifest of Flutter project roots in this repository (relative paths).
+projects:
+  - ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend

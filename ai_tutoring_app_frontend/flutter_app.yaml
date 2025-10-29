@@ -1,0 +1,4 @@
+name: ai_tutoring_app_frontend
+project_type: flutter
+entry: lib/main.dart
+description: "Flutter app root metadata for CI discovery (contains pubspec.yaml)"

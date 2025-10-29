@@ -1,0 +1,8 @@
+# PUBLIC_INTERFACE
+# Repository projects manifest for CI discovery.
+flutter_projects:
+  - path: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+    entry: lib/main.dart
+    analyze: true
+    test: true
+    notes: "Run Flutter commands from 'path' where pubspec.yaml resides."

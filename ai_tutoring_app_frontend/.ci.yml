@@ -1,0 +1,5 @@
+version: 1
+jobs:
+  mobile_analyze:
+    steps:
+      - run: ./ci.sh

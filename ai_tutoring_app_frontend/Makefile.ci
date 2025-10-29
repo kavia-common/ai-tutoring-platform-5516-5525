@@ -1,0 +1,10 @@
+# CI-specific Makefile to help generic CI runners.
+APP_DIR=ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+
+.PHONY: mobile-analyze
+mobile-analyze:
+	@cd $(APP_DIR) && flutter pub get && flutter analyze
+
+.PHONY: mobile-test
+mobile-test:
+	@cd $(APP_DIR) && flutter pub get && flutter test

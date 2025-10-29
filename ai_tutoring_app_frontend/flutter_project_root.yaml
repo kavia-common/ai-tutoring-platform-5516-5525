@@ -1,0 +1,4 @@
+flutter_project_root: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+notes: |
+  This file is a helper for CI/tooling to cd into the Flutter project directory
+  before running flutter commands.

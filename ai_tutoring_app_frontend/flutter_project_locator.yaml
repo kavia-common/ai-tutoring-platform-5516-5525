@@ -1,0 +1,6 @@
+# Flutter project locator for CI tools that start from repo root.
+# This file declares where the real Flutter app lives in this repository.
+flutter_app_dir: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+notes: >
+  CI systems should change into flutter_app_dir before invoking `flutter` commands.
+  Alternatively, use ./ci.sh or ./mobile_code_analysis.sh from the repo root.

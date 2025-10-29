@@ -1,0 +1,11 @@
+{
+  "name": "ai-tutoring-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Root package for CI helpers and scripts for the Flutter app.",
+  "scripts": {
+    "mobile:analyze": "node mobile_analysis.js analyze",
+    "mobile:test": "node mobile_analysis.js test",
+    "mobile:pubget": "node mobile_analysis.js \"pub get\""
+  }
+}

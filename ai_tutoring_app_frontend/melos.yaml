@@ -1,0 +1,15 @@
+name: ai_tutoring_monorepo
+sdkPath: .fvm/flutter_sdk
+
+# Define packages to include in the workspace.
+packages:
+  - ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+
+# Scripts can proxy common flutter commands to the real app package.
+scripts:
+  analyze:
+    run: melos exec -c 1 -- "flutter analyze"
+  test:
+    run: melos exec -c 1 -- "flutter test"
+  pub_get:
+    run: melos exec -c 1 -- "flutter pub get"

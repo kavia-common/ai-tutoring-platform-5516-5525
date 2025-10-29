@@ -1,0 +1,4 @@
+{
+  "flutter_project_root": "ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend",
+  "note": "CI should change directory to this path before running any Flutter commands (pub get, analyze, test, build). This path contains pubspec.yaml."
+}

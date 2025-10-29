@@ -1,0 +1,12 @@
+# Helper metadata to assist CI/build tools in locating the Flutter project root.
+project:
+  type: flutter
+  root: .
+  entrypoint: lib/main.dart
+  pubspec: pubspec.yaml
+  android: android
+  ios: ios
+  web: web
+  assets_dir: assets
+notes:
+  - "This file is informational for tooling only and not used by Flutter directly."

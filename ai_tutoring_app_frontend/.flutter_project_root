@@ -1,0 +1,5 @@
+# This file is a hint for CI and scripts to detect the Flutter project root.
+# It should reside alongside pubspec.yaml.
+# Scripts can use its presence to verify they are in the correct directory.
+# Path to project root (relative to repository):
+.

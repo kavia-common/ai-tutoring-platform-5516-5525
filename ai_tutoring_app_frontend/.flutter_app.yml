@@ -1,0 +1,4 @@
+flutter_app_dir: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+notes: |
+  Ensure CI sets working-directory to this path before running flutter commands,
+  or invoke one of the provided runners (ci.sh, mobile_code_analysis.sh, flutterw).

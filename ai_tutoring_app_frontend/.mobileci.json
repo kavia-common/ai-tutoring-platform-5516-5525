@@ -1,0 +1,10 @@
+{
+  "project_type": "flutter",
+  "flutter_project_dir": "ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend",
+  "commands": {
+    "bootstrap": "flutter pub get",
+    "analyze": "flutter analyze",
+    "test": "flutter test --no-pub"
+  },
+  "notes": "Mobile CI tools should cd into flutter_project_dir before running commands."
+}

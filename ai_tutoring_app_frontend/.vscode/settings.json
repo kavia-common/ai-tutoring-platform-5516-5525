@@ -1,0 +1,7 @@
+{
+  "dart.flutterSdkPath": null,
+  "dart.flutterCreateOrganization": "com.example",
+  "dart.flutterToolArgs": [],
+  "dart.analysisExcludedFolders": [],
+  "terminal.integrated.cwd": "${workspaceFolder}"
+}

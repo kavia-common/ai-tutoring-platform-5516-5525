@@ -1,0 +1,29 @@
+version: 2.1
+orbs:
+  flutter: circleci/flutter@2.2.0
+
+jobs:
+  build:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - flutter/install:
+          channel: stable
+      - run:
+          name: Flutter Pub Get
+          working_directory: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+          command: flutter pub get
+      - run:
+          name: Flutter Analyze
+          working_directory: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+          command: flutter analyze
+      - run:
+          name: Flutter Test
+          working_directory: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+          command: flutter test
+
+workflows:
+  build_and_test:
+    jobs:
+      - build

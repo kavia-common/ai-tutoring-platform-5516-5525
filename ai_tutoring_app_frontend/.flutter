@@ -1,0 +1,3 @@
+# Marker file indicating this repository contains Flutter code.
+# Some analyzers look for this file to enable Flutter-aware behavior.
+APP_DIR=ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend

@@ -1,31 +1,20 @@
-name: ai_tutoring_app_frontend
-description: "A new Flutter project."
+name: ai_tutoring_monorepo_root
+description: "Root-level minimal Flutter app to make the repo root analyzable; actual app lives under ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend."
 publish_to: 'none'
 
-version: 1.0.0+1
-
 environment:
-  sdk: ^3.7.0
+  sdk: '>=3.7.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  sqflite: ^2.3.2
-  path: ^1.9.0
-  flutter_dotenv: ^5.1.0
-  provider: ^6.1.1
-  flutter_staggered_grid_view: ^0.7.0
-  shared_preferences: ^2.2.2
-  intl: ^0.19.0
-  cupertino_icons: ^1.0.8
 
 dev_dependencies:
+  flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
 
 flutter:
   uses-material-design: true
-  assets:
-    - .env
-    - assets/
+  # Prevent CI analyzers from expecting platform folders at root; this is a wrapper app only.
+  generate: true

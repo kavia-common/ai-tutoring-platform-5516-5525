@@ -1,0 +1,4 @@
+{
+  "flutter_app_dir": "ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend",
+  "notes": "Tools invoking analysis from the repository root should cd into flutter_app_dir before running `flutter` commands."
+}

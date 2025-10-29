@@ -1,0 +1,6 @@
+{
+  "name": "ai_tutoring_mobile_ci",
+  "entry": "./mobile_code_analysis.sh",
+  "working_directory": ".",
+  "notes": "This repository hosts the Flutter app under ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend. The entry script changes into that directory before running Flutter."
+}

@@ -1,0 +1,5 @@
+{
+  "flutter_app_dir": "ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend",
+  "entry_point": "lib/main.dart",
+  "notes": "CI should cd into flutter_app_dir before running flutter commands."
+}

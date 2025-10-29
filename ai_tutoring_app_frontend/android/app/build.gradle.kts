@@ -1,44 +1,48 @@
 plugins {
     id("com.android.application")
-    id("kotlin-android")
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
-    id("dev.flutter.flutter-gradle-plugin")
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
-    namespace = "com.example.ai_tutoring_app_frontend"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
-    }
+    namespace = "com.example.monorepo_root_wrapper"
+    compileSdk = 34
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.ai_tutoring_app_frontend"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        applicationId = "com.example.monorepo_root_wrapper"
+        minSdk = 23
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            isMinifyEnabled = false
         }
     }
 }
 
-flutter {
-    source = "../.."
+dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.22")
 }
+```
+
+Explanation: Add a minimal Android Manifest so analyzers see a valid app module
+````write file="android/app/src/main/AndroidManifest.xml"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.monorepo_root_wrapper">
+    <application
+        android:label="Monorepo Root Wrapper"
+        android:icon="@mipmap/ic_launcher">
+        <activity
+            android:name="io.flutter.embedding.android.FlutterActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.Material3.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
