@@ -1,3 +1,3 @@
-# Marker indicating this repository contains a Flutter project.
-# Run commands from:
+# Repository-level marker to hint Flutter-related CI tools.
+# The actual Flutter app is inside:
 ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend

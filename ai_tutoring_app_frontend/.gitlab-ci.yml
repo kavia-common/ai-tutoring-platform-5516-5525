@@ -3,20 +3,21 @@ stages:
   - test
 
 variables:
-  FLUTTER_VERSION: "3.22.0"
+  FLUTTER_CHANNEL: "stable"
+
+image: ghcr.io/cirruslabs/flutter:latest
+
+before_script:
+  - flutter --version
+  - cd ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
 
 analyze:
   stage: analyze
-  image: ghcr.io/cirruslabs/flutter:${FLUTTER_VERSION}
   script:
-    - cd ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
     - flutter pub get
     - flutter analyze
 
 test:
   stage: test
-  image: ghcr.io/cirruslabs/flutter:${FLUTTER_VERSION}
   script:
-    - cd ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
-    - flutter pub get
-    - flutter test --no-pub
+    - flutter test --machine

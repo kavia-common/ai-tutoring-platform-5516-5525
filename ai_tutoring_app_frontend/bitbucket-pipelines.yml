@@ -1,0 +1,14 @@
+image: cirrusci/flutter:stable
+
+pipelines:
+  default:
+    - step:
+        name: Analyze and Test Flutter App
+        caches:
+          - flutter
+        script:
+          - flutter --version
+          - cd ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+          - flutter pub get
+          - flutter analyze
+          - CI=true flutter test

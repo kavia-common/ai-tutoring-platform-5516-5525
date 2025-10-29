@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# PUBLIC_INTERFACE
+# Proxy script for CI systems that call `flutter` from the repository root.
+# Delegates to ./flutterw (which cd's into the app directory first).
+set -euo pipefail
+
+if [[ ! -x "./flutterw" ]]; then
+  echo "Error: flutterw wrapper not found or not executable at repo root." >&2
+  echo "Run: chmod +x flutterw" >&2
+  exit 1
+fi
+
+exec ./flutterw "$@"

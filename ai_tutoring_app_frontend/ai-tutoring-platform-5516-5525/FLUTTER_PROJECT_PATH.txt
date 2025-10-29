@@ -1,0 +1,3 @@
+# This file is used by CI tooling to locate the Flutter project root.
+# It must contain a relative path from this file to the Flutter app directory.
+ai_tutoring_app_frontend

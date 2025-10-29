@@ -1,0 +1,8 @@
+working_directory: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+commands:
+  - flutter pub get
+  - flutter analyze
+  - CI=true flutter test
+notes: |
+  Tools that auto-detect this filename can cd into `working_directory` before running analysis.
+  Alternatively, invoke ./flutterw or run_flutter_checks.sh from repository root.

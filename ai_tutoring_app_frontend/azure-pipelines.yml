@@ -1,39 +1,21 @@
 trigger:
-  - '*'
+  - main
+  - master
 
 pool:
   vmImage: 'ubuntu-latest'
 
-variables:
-  FLUTTER_VERSION: '3.22.0'
-
 steps:
-  - task: Bash@3
-    displayName: 'Install Flutter'
+  - checkout: self
+  - task: FlutterInstall@0
     inputs:
-      targetType: 'inline'
-      script: |
-        git clone https://github.com/flutter/flutter.git -b stable
-        echo "##vso[task.prependpath]$(System.DefaultWorkingDirectory)/flutter/bin"
-        flutter --version
-
-  - task: Bash@3
-    displayName: 'Flutter pub get'
-    inputs:
-      targetType: 'inline'
-      workingDirectory: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
-      script: flutter pub get
-
-  - task: Bash@3
-    displayName: 'Flutter analyze'
-    inputs:
-      targetType: 'inline'
-      workingDirectory: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
-      script: flutter analyze
-
-  - task: Bash@3
-    displayName: 'Flutter test'
-    inputs:
-      targetType: 'inline'
-      workingDirectory: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
-      script: flutter test --no-pub
+      channel: 'stable'
+  - script: flutter pub get
+    workingDirectory: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+    displayName: 'flutter pub get'
+  - script: flutter analyze
+    workingDirectory: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+    displayName: 'flutter analyze'
+  - script: flutter test
+    workingDirectory: ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend
+    displayName: 'flutter test'

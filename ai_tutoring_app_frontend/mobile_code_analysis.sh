@@ -1,37 +1,19 @@
 #!/usr/bin/env bash
-# Mobile code analysis shim to ensure analysis runs from the actual Flutter app directory.
-# Default behavior: run `flutter analyze` from the app directory.
-# Usage:
-#   ./mobile_code_analysis.sh            # runs analyze
-#   ./mobile_code_analysis.sh test       # runs tests
-#   ./mobile_code_analysis.sh "pub get"  # arbitrary flutter command(s)
-
+# PUBLIC_INTERFACE
+# Conventional CI entrypoint used by automated pipelines.
+# Delegates to the root flutter wrapper which cd's into the app directory.
 set -euo pipefail
 
-APP_DIR="ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend"
-
-if [[ ! -f "$APP_DIR/pubspec.yaml" ]]; then
-  echo "Error: Could not determine project root directory for Flutter project (missing pubspec at $APP_DIR)" >&2
+if [[ ! -x "./flutterw" ]]; then
+  echo "Error: flutterw wrapper not found or not executable at repo root." >&2
   exit 1
 fi
 
-cd "$APP_DIR"
+echo "Running Flutter dependency install..."
+./flutterw pub get
 
-CMD="${1:-analyze}"
+echo "Running Flutter analyze..."
+./flutterw analyze
 
-case "$CMD" in
-  "analyze")
-    echo "Running flutter analyze in $PWD"
-    flutter pub get
-    flutter analyze
-    ;;
-  "test")
-    echo "Running flutter test in $PWD"
-    flutter pub get
-    flutter test
-    ;;
-  *)
-    echo "Running custom command in $PWD: flutter $CMD"
-    flutter $CMD
-    ;;
-esac
+echo "Running Flutter tests..."
+CI=true ./flutterw test

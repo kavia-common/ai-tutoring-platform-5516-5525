@@ -1,20 +1,10 @@
-name: ai_tutoring_monorepo_root
-description: "Root-level minimal Flutter app to make the repo root analyzable; actual app lives under ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend."
+name: workspace_root
+description: "Workspace root helper for CI. The actual Flutter app is in ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend."
 publish_to: 'none'
-
 environment:
-  sdk: '>=3.7.0 <4.0.0'
-
-dependencies:
-  flutter:
-    sdk: flutter
-
-dev_dependencies:
-  flutter_lints: ^5.0.0
-  flutter_test:
-    sdk: flutter
+  sdk: '>=3.0.0 <4.0.0'
 
 flutter:
-  uses-material-design: true
-  # Prevent CI analyzers from expecting platform folders at root; this is a wrapper app only.
-  generate: true
+  # Point to the real app directory for tools that try to resolve relative paths.
+  assets:
+    - ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend/assets/

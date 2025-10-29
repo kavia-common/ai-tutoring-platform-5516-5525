@@ -1,1 +1,13 @@
-.env
+# Ignore common build and tool artifacts
+build/
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+.idea/
+.vscode/
+android/.gradle/
+android/local.properties
+
+# CI helper logs (if any)
+*.log

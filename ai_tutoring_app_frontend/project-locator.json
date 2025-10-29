@@ -1,0 +1,4 @@
+{
+  "flutter_project_root": "ai-tutoring-platform-5516-5525/ai_tutoring_app_frontend",
+  "notes": "CI tools can read this to cd into the Flutter app before running analysis or tests."
+}

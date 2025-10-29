@@ -1,0 +1,8 @@
+# Preserve executable bit for CI helper scripts
+flutterw eol=lf
+flutter eol=lf
+run_flutter_checks.sh eol=lf
+mobile_code_analysis.sh eol=lf
+detect_flutter_project_root.sh eol=lf
+.github/workflows/* text eol=lf
+Makefile text eol=lf

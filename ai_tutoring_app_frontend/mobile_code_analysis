@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# PUBLIC_INTERFACE
+# Conventional CI entrypoint without file extension.
+# Delegates to mobile_code_analysis.sh which changes into the Flutter app dir.
+set -euo pipefail
+bash "$(dirname "$0")/mobile_code_analysis.sh"
